@@ -9,8 +9,8 @@ import (
 	"encoding/hex"
 	"encoding/json"
 
+	"github.com/FactomProject/btcd/btcjson"
 	"github.com/FactomProject/btcd/wire"
-	"github.com/FactomProject/btcjson"
 	"github.com/FactomProject/btcutil"
 )
 

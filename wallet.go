@@ -8,9 +8,9 @@ import (
 	"encoding/json"
 	"strconv"
 
+	"github.com/FactomProject/btcd/btcjson"
 	"github.com/FactomProject/btcd/chaincfg"
 	"github.com/FactomProject/btcd/wire"
-	"github.com/FactomProject/btcjson"
 	"github.com/FactomProject/btcutil"
 	"github.com/FactomProject/btcws"
 )

@@ -9,7 +9,7 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/FactomProject/btcjson"
+	"github.com/FactomProject/btcd/btcjson"
 	"github.com/FactomProject/btcutil"
 )
 
