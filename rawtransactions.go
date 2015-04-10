@@ -8,6 +8,7 @@ import (
 	"bytes"
 	"encoding/hex"
 	"encoding/json"
+	"fmt"
 
 	"github.com/FactomProject/btcd/btcjson"
 	"github.com/FactomProject/btcd/wire"
@@ -81,6 +82,8 @@ func (r FutureGetRawTransactionResult) Receive() (*btcutil.Tx, error) {
 	if err != nil {
 		return nil, err
 	}
+
+	fmt.Println("serializedTx= ", hex.Dump(serializedTx))
 
 	// Deserialize the transaction and return it.
 	var msgTx wire.MsgTx
