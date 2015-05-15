@@ -9,7 +9,7 @@ import (
 	"strconv"
 
 	"github.com/FactomProject/btcd/btcjson"
-	"github.com/FactomProject/btcd/chaincfg"
+	//	"github.com/FactomProject/btcd/chaincfg"
 	"github.com/FactomProject/btcd/wire"
 	"github.com/FactomProject/btcutil"
 	"github.com/FactomProject/btcws"
@@ -879,7 +879,7 @@ func (r FutureAddMultisigAddressResult) Receive() (btcutil.Address, error) {
 		return nil, err
 	}
 
-	return btcutil.DecodeAddress(addr, &chaincfg.MainNetParams)
+	return btcutil.DecodeAddress(addr)
 }
 
 // AddMultisigAddressAsync returns an instance of a type that can be used to get
@@ -1010,7 +1010,7 @@ func (r FutureGetNewAddressResult) Receive() (btcutil.Address, error) {
 		return nil, err
 	}
 
-	return btcutil.DecodeAddress(addr, &chaincfg.MainNetParams)
+	return btcutil.DecodeAddress(addr)
 }
 
 // GetNewAddressAsync returns an instance of a type that can be used to get the
@@ -1053,7 +1053,7 @@ func (r FutureGetRawChangeAddressResult) Receive() (btcutil.Address, error) {
 		return nil, err
 	}
 
-	return btcutil.DecodeAddress(addr, &chaincfg.MainNetParams)
+	return btcutil.DecodeAddress(addr)
 }
 
 // GetRawChangeAddressAsync returns an instance of a type that can be used to
@@ -1097,7 +1097,7 @@ func (r FutureGetAccountAddressResult) Receive() (btcutil.Address, error) {
 		return nil, err
 	}
 
-	return btcutil.DecodeAddress(addr, &chaincfg.MainNetParams)
+	return btcutil.DecodeAddress(addr)
 }
 
 // GetAccountAddressAsync returns an instance of a type that can be used to get
@@ -1221,8 +1221,7 @@ func (r FutureGetAddressesByAccountResult) Receive() ([]btcutil.Address, error) 
 
 	addrs := make([]btcutil.Address, 0, len(addrStrings))
 	for _, addrStr := range addrStrings {
-		addr, err := btcutil.DecodeAddress(addrStr,
-			&chaincfg.MainNetParams)
+		addr, err := btcutil.DecodeAddress(addrStr)
 		if err != nil {
 			return nil, err
 		}
