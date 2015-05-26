@@ -30,13 +30,13 @@ func main() {
 	}
 
 	// Connect to local btcd RPC server using websockets.
-	btcdHomeDir := btcutil.AppDataDir("btcd", false)
+	btcdHomeDir := btcutil.AppDataDir("factom", false)
 	certs, err := ioutil.ReadFile(filepath.Join(btcdHomeDir, "rpc.cert"))
 	if err != nil {
 		log.Fatal(err)
 	}
 	connCfg := &btcrpcclient.ConnConfig{
-		Host:         "localhost:8334",
+		Host:         "localhost:8384",
 		Endpoint:     "ws",
 		User:         "yourrpcuser",
 		Pass:         "yourrpcpass",

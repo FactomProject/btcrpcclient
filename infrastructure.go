@@ -21,7 +21,7 @@ import (
 	"time"
 
 	"github.com/FactomProject/btcd/btcjson"
-	"github.com/FactomProject/btcws"
+	"github.com/FactomProject/btcd/btcjson/btcws"
 	"github.com/FactomProject/go-socks/socks"
 	"github.com/FactomProject/websocket"
 )

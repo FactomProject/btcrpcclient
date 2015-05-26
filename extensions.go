@@ -10,9 +10,9 @@ import (
 	"fmt"
 
 	"github.com/FactomProject/btcd/btcjson"
+	"github.com/FactomProject/btcd/btcjson/btcws"
 	"github.com/FactomProject/btcd/wire"
 	"github.com/FactomProject/btcutil"
-	"github.com/FactomProject/btcws"
 )
 
 // FutureDebugLevelResult is a future promise to deliver the result of a
